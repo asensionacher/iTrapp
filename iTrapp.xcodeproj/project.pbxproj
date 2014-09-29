@@ -167,7 +167,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
-				ORGANIZATIONNAME = "Sergi Asensio";
+				ORGANIZATIONNAME = iTrapp;
 				TargetAttributes = {
 					55949E8319D99C4C00224DC9 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -416,6 +416,7 @@
 				55949EAC19D99C4D00224DC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55949EAD19D99C4D00224DC9 /* Build configuration list for PBXNativeTarget "iTrappTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +425,7 @@
 				55949EAF19D99C4D00224DC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
