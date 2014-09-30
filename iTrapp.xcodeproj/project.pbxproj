@@ -15,8 +15,8 @@
 		55949E9819D99C4C00224DC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55949E9719D99C4C00224DC9 /* Images.xcassets */; };
 		55949E9B19D99C4D00224DC9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55949E9919D99C4C00224DC9 /* LaunchScreen.xib */; };
 		55949EA719D99C4D00224DC9 /* iTrappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55949EA619D99C4D00224DC9 /* iTrappTests.m */; };
-		55C3F4D519DAA49100C12742 /* Disco.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C3F4D419DAA49100C12742 /* Disco.m */; };
 		55CCE19619DAB084009D83D7 /* Concierto.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE19519DAB084009D83D7 /* Concierto.m */; };
+		55CCE19F19DAE4B4009D83D7 /* Disco.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE19E19DAE4B4009D83D7 /* Disco.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +44,10 @@
 		55949EA019D99C4D00224DC9 /* iTrappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTrappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55949EA519D99C4D00224DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55949EA619D99C4D00224DC9 /* iTrappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTrappTests.m; sourceTree = "<group>"; };
-		55C3F4D319DAA49100C12742 /* Disco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Disco.h; path = ../Disco.h; sourceTree = "<group>"; };
-		55C3F4D419DAA49100C12742 /* Disco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Disco.m; path = ../Disco.m; sourceTree = "<group>"; };
 		55CCE19419DAB084009D83D7 /* Concierto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Concierto.h; sourceTree = "<group>"; };
 		55CCE19519DAB084009D83D7 /* Concierto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Concierto.m; sourceTree = "<group>"; };
+		55CCE19D19DAE4B4009D83D7 /* Disco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Disco.h; sourceTree = "<group>"; };
+		55CCE19E19DAE4B4009D83D7 /* Disco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Disco.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,10 +89,10 @@
 		55949E8619D99C4C00224DC9 /* iTrapp */ = {
 			isa = PBXGroup;
 			children = (
+				55CCE19D19DAE4B4009D83D7 /* Disco.h */,
+				55CCE19E19DAE4B4009D83D7 /* Disco.m */,
 				55CCE19419DAB084009D83D7 /* Concierto.h */,
 				55CCE19519DAB084009D83D7 /* Concierto.m */,
-				55C3F4D319DAA49100C12742 /* Disco.h */,
-				55C3F4D419DAA49100C12742 /* Disco.m */,
 				55949E8B19D99C4C00224DC9 /* AppDelegate.h */,
 				55949E8C19D99C4C00224DC9 /* AppDelegate.m */,
 				55949E9119D99C4C00224DC9 /* ViewController.h */,
@@ -232,7 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55C3F4D519DAA49100C12742 /* Disco.m in Sources */,
+				55CCE19F19DAE4B4009D83D7 /* Disco.m in Sources */,
 				55949E8D19D99C4C00224DC9 /* AppDelegate.m in Sources */,
 				55CCE19619DAB084009D83D7 /* Concierto.m in Sources */,
 				55949E9019D99C4C00224DC9 /* iTrapp.xcdatamodeld in Sources */,
