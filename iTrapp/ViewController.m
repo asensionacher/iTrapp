@@ -33,7 +33,7 @@
     Concierto *concierto1 = [[Concierto alloc] init];
     concierto1.nombre = @"LA MERCE";
     concierto1.discos = [[NSMutableArray alloc] init];
-    disco.nombre = @"RU";
+    disco.nombre = @"RU";s
     disco.precio = @8;
     disco.vendidos= @1;
     [concierto1.discos addObject:disco];
