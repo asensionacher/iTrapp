@@ -17,6 +17,7 @@
 		55949EA719D99C4D00224DC9 /* iTrappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55949EA619D99C4D00224DC9 /* iTrappTests.m */; };
 		55CCE19619DAB084009D83D7 /* Concierto.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE19519DAB084009D83D7 /* Concierto.m */; };
 		55CCE19F19DAE4B4009D83D7 /* Disco.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE19E19DAE4B4009D83D7 /* Disco.m */; };
+		55CCE1A219DAE686009D83D7 /* InformacionConciertoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE1A119DAE686009D83D7 /* InformacionConciertoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		55CCE19519DAB084009D83D7 /* Concierto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Concierto.m; sourceTree = "<group>"; };
 		55CCE19D19DAE4B4009D83D7 /* Disco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Disco.h; sourceTree = "<group>"; };
 		55CCE19E19DAE4B4009D83D7 /* Disco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Disco.m; sourceTree = "<group>"; };
+		55CCE1A019DAE686009D83D7 /* InformacionConciertoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformacionConciertoViewController.h; sourceTree = "<group>"; };
+		55CCE1A119DAE686009D83D7 /* InformacionConciertoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformacionConciertoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 			children = (
 				55CCE19D19DAE4B4009D83D7 /* Disco.h */,
 				55CCE19E19DAE4B4009D83D7 /* Disco.m */,
+				55CCE1A019DAE686009D83D7 /* InformacionConciertoViewController.h */,
+				55CCE1A119DAE686009D83D7 /* InformacionConciertoViewController.m */,
 				55CCE19419DAB084009D83D7 /* Concierto.h */,
 				55CCE19519DAB084009D83D7 /* Concierto.m */,
 				55949E8B19D99C4C00224DC9 /* AppDelegate.h */,
@@ -232,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CCE1A219DAE686009D83D7 /* InformacionConciertoViewController.m in Sources */,
 				55CCE19F19DAE4B4009D83D7 /* Disco.m in Sources */,
 				55949E8D19D99C4C00224DC9 /* AppDelegate.m in Sources */,
 				55CCE19619DAB084009D83D7 /* Concierto.m in Sources */,

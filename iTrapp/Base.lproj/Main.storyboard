@@ -43,6 +43,60 @@
             </objects>
             <point key="canvasLocation" x="1350" y="479"/>
         </scene>
+        <!--Concierto X-->
+        <scene sceneID="ULP-Kp-SG1">
+            <objects>
+                <viewController storyboardIdentifier="InformacionConciertoViewController" id="UMH-mR-Mqt" customClass="InformacionConciertoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5BL-eO-JmN"/>
+                        <viewControllerLayoutGuide type="bottom" id="kG9-mz-GLY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Lo-yC-0L3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONCIERTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdz-kv-hwK">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="54" width="400" height="68"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISCO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVy-Xo-guh">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="139" width="400" height="68"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="kdz-kv-hwK"/>
+                                <exclude reference="KVy-Xo-guh"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="kdz-kv-hwK"/>
+                                <include reference="KVy-Xo-guh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Concierto X" id="iqc-A7-Xrk">
+                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="OAn-31-Tkg"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="xnh-3e-Zyh"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wsk-Y9-1X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3006" y="480"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ylt-AV-kSi">
             <objects>
@@ -60,6 +114,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78I-Pc-IuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="538" y="481"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dd6-ti-ove">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BtQ-Fh-ZfN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xjf-qk-eaH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UMH-mR-Mqt" kind="relationship" relationship="rootViewController" id="hn6-u6-fQd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Es2-be-iAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2088" y="480"/>
         </scene>
     </scenes>
 </document>

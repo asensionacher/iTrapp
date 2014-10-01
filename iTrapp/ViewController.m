@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Concierto.h"
+#import "InformacionConciertoViewController.h"
 
 @interface ViewController ()
 @property NSMutableArray *conciertos;
@@ -57,6 +58,12 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _conciertos.count;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    InformacionConciertoViewController *informacionConciertoViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"InformacionConciertoViewController"];
+    [self presentViewController:informacionConciertoViewController animated:YES completion:nil];
 }
 
 @end
