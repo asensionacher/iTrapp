@@ -63,7 +63,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     InformacionConciertoViewController *informacionConciertoViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"InformacionConciertoViewController"];
-    [self presentViewController:informacionConciertoViewController animated:YES completion:nil];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:informacionConciertoViewController];
+    informacionConciertoViewController.conciertoSeleccionado = [_conciertos objectAtIndex:indexPath.row];
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 @end

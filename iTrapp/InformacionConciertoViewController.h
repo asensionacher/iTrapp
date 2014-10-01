@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Concierto.h"
 
 @interface InformacionConciertoViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *nombreLabel;
+@property (strong, nonatomic) IBOutlet UILabel *discoLabel;
+
+@property Concierto *conciertoSeleccionado;
 
 @end
+

@@ -64,13 +64,13 @@
                                     <rect key="frame" x="0.0" y="54" width="400" height="68"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISCO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVy-Xo-guh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISCO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kA3-ZL-hiI">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="139" width="400" height="68"/>
+                                    <rect key="frame" x="0.0" y="130" width="400" height="54"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -78,20 +78,29 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="kdz-kv-hwK"/>
-                                <exclude reference="KVy-Xo-guh"/>
+                                <exclude reference="kA3-ZL-hiI"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="kdz-kv-hwK"/>
-                                <include reference="KVy-Xo-guh"/>
+                                <include reference="kA3-ZL-hiI"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Concierto X" id="iqc-A7-Xrk">
-                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="OAn-31-Tkg"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="xnh-3e-Zyh"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Concierto X" id="i1Y-kJ-IFK">
+                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="vYN-hc-bpE">
+                            <connections>
+                                <action selector="atrasButton:" destination="UMH-mR-Mqt" id="qH9-SD-iLk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="discoLabel" destination="kA3-ZL-hiI" id="rmU-Dv-bsK"/>
+                        <outlet property="nombreLabel" destination="kA3-ZL-hiI" id="Ka6-Cv-nHa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wsk-Y9-1X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,20 +125,20 @@
             <point key="canvasLocation" x="538" y="481"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Dd6-ti-ove">
+        <scene sceneID="By7-14-AOl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BtQ-Fh-ZfN" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gvt-nR-3lN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xjf-qk-eaH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3hT-2L-S7a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="UMH-mR-Mqt" kind="relationship" relationship="rootViewController" id="hn6-u6-fQd"/>
+                        <segue destination="UMH-mR-Mqt" kind="relationship" relationship="rootViewController" id="qPu-j7-9TW"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Es2-be-iAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dz2-U2-2mD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2088" y="480"/>
         </scene>
