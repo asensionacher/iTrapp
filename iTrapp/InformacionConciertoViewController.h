@@ -10,8 +10,9 @@
 #import "Concierto.h"
 
 @interface InformacionConciertoViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UILabel *nombreLabel;
+@property (strong, nonatomic) IBOutlet UINavigationItem *nombreLabel;
 @property (strong, nonatomic) IBOutlet UILabel *discoLabel;
+@property (strong, nonatomic) IBOutlet UITextView *textoDiscos;
 
 @property Concierto *conciertoSeleccionado;
 

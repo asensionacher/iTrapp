@@ -18,6 +18,7 @@
 		55CCE19619DAB084009D83D7 /* Concierto.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE19519DAB084009D83D7 /* Concierto.m */; };
 		55CCE19F19DAE4B4009D83D7 /* Disco.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE19E19DAE4B4009D83D7 /* Disco.m */; };
 		55CCE1A219DAE686009D83D7 /* InformacionConciertoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CCE1A119DAE686009D83D7 /* InformacionConciertoViewController.m */; };
+		55F7D27519DCBEEC00FC6490 /* NuevoConciertoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F7D27419DCBEEC00FC6490 /* NuevoConciertoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		55CCE19E19DAE4B4009D83D7 /* Disco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Disco.m; sourceTree = "<group>"; };
 		55CCE1A019DAE686009D83D7 /* InformacionConciertoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformacionConciertoViewController.h; sourceTree = "<group>"; };
 		55CCE1A119DAE686009D83D7 /* InformacionConciertoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformacionConciertoViewController.m; sourceTree = "<group>"; };
+		55F7D27319DCBEEC00FC6490 /* NuevoConciertoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NuevoConciertoViewController.h; sourceTree = "<group>"; };
+		55F7D27419DCBEEC00FC6490 /* NuevoConciertoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NuevoConciertoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 			children = (
 				55CCE19D19DAE4B4009D83D7 /* Disco.h */,
 				55CCE19E19DAE4B4009D83D7 /* Disco.m */,
+				55F7D27319DCBEEC00FC6490 /* NuevoConciertoViewController.h */,
+				55F7D27419DCBEEC00FC6490 /* NuevoConciertoViewController.m */,
 				55CCE1A019DAE686009D83D7 /* InformacionConciertoViewController.h */,
 				55CCE1A119DAE686009D83D7 /* InformacionConciertoViewController.m */,
 				55CCE19419DAB084009D83D7 /* Concierto.h */,
@@ -240,6 +245,7 @@
 				55CCE1A219DAE686009D83D7 /* InformacionConciertoViewController.m in Sources */,
 				55CCE19F19DAE4B4009D83D7 /* Disco.m in Sources */,
 				55949E8D19D99C4C00224DC9 /* AppDelegate.m in Sources */,
+				55F7D27519DCBEEC00FC6490 /* NuevoConciertoViewController.m in Sources */,
 				55CCE19619DAB084009D83D7 /* Concierto.m in Sources */,
 				55949E9019D99C4C00224DC9 /* iTrapp.xcdatamodeld in Sources */,
 				55949E9319D99C4C00224DC9 /* ViewController.m in Sources */,

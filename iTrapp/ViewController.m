@@ -17,6 +17,7 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -31,15 +32,21 @@
     [concierto.discos addObject:disco];
     [_conciertos addObject:concierto];
     
+    Disco *d = [[Disco alloc] init];
     Concierto *concierto1 = [[Concierto alloc] init];
     concierto1.nombre = @"LA MERCE";
     concierto1.discos = [[NSMutableArray alloc] init];
-    disco.nombre = @"RU";
-    disco.precio = @8;
-    disco.vendidos= @1;
-    [concierto1.discos addObject:disco];
+    d.nombre = @"RU";
+    d.precio = @8;
+    d.vendidos= @1;
+    [concierto1.discos addObject:d];
+
+    Disco *dd = [[Disco alloc] init];
+    dd.nombre = @"ADROMICFMS";
+    dd.precio = @8;
+    dd.vendidos= @2;
+    [concierto1.discos addObject:dd];
     [_conciertos addObject:concierto1];
-    
     
 }
 

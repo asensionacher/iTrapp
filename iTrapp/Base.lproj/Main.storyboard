@@ -37,11 +37,17 @@
                             <outlet property="delegate" destination="8Gq-Fb-Ixh" id="FmV-jb-Ir9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="iTrapp" id="ou9-z2-ACX"/>
+                    <navigationItem key="navigationItem" title="iTrapp" id="ou9-z2-ACX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="l5o-NQ-Nij">
+                            <connections>
+                                <action selector="nuevoButton:" destination="8Gq-Fb-Ixh" id="n5f-MY-Bad"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqD-2G-UWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350" y="479"/>
+            <point key="canvasLocation" x="1296" y="-317"/>
         </scene>
         <!--Concierto X-->
         <scene sceneID="ULP-Kp-SG1">
@@ -55,36 +61,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONCIERTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdz-kv-hwK">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGl-Xy-qPS">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="54" width="400" height="68"/>
+                                    <rect key="frame" x="0.0" y="64" width="400" height="600"/>
                                 </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISCO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kA3-ZL-hiI">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="130" width="400" height="54"/>
-                                </variation>
-                            </label>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="kdz-kv-hwK"/>
-                                <exclude reference="kA3-ZL-hiI"/>
+                                <exclude reference="GGl-Xy-qPS"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="kdz-kv-hwK"/>
-                                <include reference="kA3-ZL-hiI"/>
+                                <include reference="GGl-Xy-qPS"/>
                             </mask>
                         </variation>
                     </view>
@@ -98,13 +93,13 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="discoLabel" destination="kA3-ZL-hiI" id="rmU-Dv-bsK"/>
-                        <outlet property="nombreLabel" destination="kA3-ZL-hiI" id="Ka6-Cv-nHa"/>
+                        <outlet property="nombreLabel" destination="i1Y-kJ-IFK" id="hhg-vD-LxI"/>
+                        <outlet property="textoDiscos" destination="GGl-Xy-qPS" id="ZMp-tp-iaI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wsk-Y9-1X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3006" y="480"/>
+            <point key="canvasLocation" x="2808" y="-315"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ylt-AV-kSi">
@@ -122,7 +117,49 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78I-Pc-IuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="538" y="481"/>
+            <point key="canvasLocation" x="483" y="-315"/>
+        </scene>
+        <!--NuevoConciertoViewController-->
+        <scene sceneID="IsZ-aq-R0y">
+            <objects>
+                <viewController storyboardIdentifier="NuevoConciertoViewController" title="NuevoConciertoViewController" id="oFF-de-qgk" customClass="NuevoConciertoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v3k-Kg-QOh"/>
+                        <viewControllerLayoutGuide type="bottom" id="ns6-BS-8Mm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dnh-8k-n4f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K71-5d-CzI">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Título del concierto"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="51" y="72" width="299" height="30"/>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="K71-5d-CzI"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="K71-5d-CzI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nuevo concierto" id="wme-7C-As5">
+                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="5Il-y0-x5g"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OBg-mA-39p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2796" y="355"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="By7-14-AOl">
@@ -140,7 +177,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dz2-U2-2mD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2088" y="480"/>
+            <point key="canvasLocation" x="2034" y="-316"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="opb-2T-yAC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t92-gl-bJE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TpJ-ZU-qbB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oFF-de-qgk" kind="relationship" relationship="rootViewController" id="XRX-Fc-gWJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aL1-mj-znT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2034" y="355"/>
         </scene>
     </scenes>
 </document>

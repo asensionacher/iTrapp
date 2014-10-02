@@ -17,15 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _nombreLabel.text = _conciertoSeleccionado.nombre;
+    _nombreLabel.title = _conciertoSeleccionado.nombre;
     _discoLabel.text = @"HOLA";
-    NSString *aux;
-    for (aux in _conciertoSeleccionado.discos) {
-        if( [aux caseInsensitiveCompare:_conciertoSeleccionado.nombre] == NSOrderedSame ) {
-            _discoLabel.text = _conciertoSeleccionado.nombre;
-            break;
-        }
+    
+    _textoDiscos.text = @"";
+    for (int i = 0; i < _conciertoSeleccionado.discos.count; i++) {
+        Disco *k = [[Disco alloc] init];
+        k = [_conciertoSeleccionado.discos objectAtIndex:i];
+        NSString *aux = [[NSString alloc] init];
+        aux = _textoDiscos.text;
+        _textoDiscos.text = [NSString stringWithFormat:@"%@\r %@ - %@", aux, k.nombre, k.vendidos ];
     }
+    //Disco *k = [_conciertoSeleccionado.discos objectAtIndex:0];
+    //_discoLabel.text = k.nombre;
     
     
 }
