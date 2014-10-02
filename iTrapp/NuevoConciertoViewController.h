@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Disco.h";
 
 @interface NuevoConciertoViewController : UIViewController
 @property NSInteger posicion;
+@property NSMutableArray *nombreDisco;
+@property NSMutableArray *precioDisco;
+@property NSMutableArray *discos;
 @end

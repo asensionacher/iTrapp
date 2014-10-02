@@ -41,6 +41,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="l5o-NQ-Nij">
                             <connections>
                                 <action selector="nuevoButton:" destination="8Gq-Fb-Ixh" id="n5f-MY-Bad"/>
+                                <segue destination="oFF-de-qgk" kind="show" id="F0K-34-H1o"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -131,7 +132,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K71-5d-CzI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del concierto" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K71-5d-CzI">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <accessibility key="accessibilityConfiguration" hint="Título del concierto"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -140,26 +141,44 @@
                                     <rect key="frame" x="51" y="72" width="299" height="30"/>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9v-sS-VvO">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Nuevo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="171" y="110" width="45" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="nuevoButton:" destination="oFF-de-qgk" eventType="touchUpInside" id="0q8-6L-c59"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="K71-5d-CzI"/>
+                                <exclude reference="Z9v-sS-VvO"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="K71-5d-CzI"/>
+                                <include reference="Z9v-sS-VvO"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Nuevo concierto" id="wme-7C-As5">
-                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="5Il-y0-x5g"/>
+                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="5Il-y0-x5g">
+                            <connections>
+                                <action selector="siguienteButton:" destination="oFF-de-qgk" id="K45-0R-5hP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OBg-mA-39p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2796" y="355"/>
+            <point key="canvasLocation" x="1296" y="351"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="By7-14-AOl">
@@ -195,7 +214,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aL1-mj-znT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2034" y="355"/>
+            <point key="canvasLocation" x="483" y="351"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="F0K-34-H1o"/>
+    </inferredMetricsTieBreakers>
 </document>
