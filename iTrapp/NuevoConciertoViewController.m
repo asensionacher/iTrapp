@@ -21,6 +21,7 @@ void *anadirLabelNombreDisco();
     _nombreDisco = [[NSMutableArray alloc] init];
     _precioDisco = [[NSMutableArray alloc] init];
     _discos = [[NSMutableArray alloc] init];
+    _concierto = [[Concierto alloc] init];
     _posicion = 140;
     
     //anado el precio
@@ -83,8 +84,8 @@ void *anadirLabelNombreDisco();
     [self.view addSubview:textField1];
     
 }
-
 - (IBAction)siguienteButton:(id)sender {
+    _concierto.nombre = _nombreConcierto.text;
     for (int i = 0; i < _precioDisco.count; i++) {
         UITextField *nombreDisco = [UITextField alloc];
         nombreDisco = _nombreDisco[i];
@@ -100,38 +101,40 @@ void *anadirLabelNombreDisco();
             
             NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
             [f setNumberStyle:NSNumberFormatterDecimalStyle];
-            NSNumber * myNumber = [f numberFromString:precioDisco.text];
+            NSNumber * myN = [f numberFromString:precioDisco.text];
+            NSInteger *myNumber = [myN integerValue];
             
             Disco *disco = [Disco alloc];
             disco.precio = myNumber;
             disco.nombre = nombreDisco.text;
-            disco.vendidos = @0;
+            disco.vendidos = 0;
             [_discos addObject:disco];
         }
     }
     
+    _concierto.discos = _discos;
+    ConciertoViewController *conciertoViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ConciertoViewController"];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:conciertoViewController];
+    conciertoViewController.concierto = _concierto;
+    [self presentViewController:navigationController animated:YES completion:nil];
+
 }
+
+
+
+/*-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"showDetailSegue"]){
+        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+        ConciertoViewController *controller = (ConciertoViewController *)navController.topViewController;
+        controller.concierto = _concierto;
+    }
+}*/
      
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
--(BOOL)isNumericTextField:(UITextField *)textField{
-    
-    //Returns TRUE if numeric
-    
-    BOOL valid;
-    
-    NSCharacterSet *okchars = [NSCharacterSet characterSetWithCharactersInString:@"0123456789-."];
-    
-    NSCharacterSet *stringsFromField = [NSCharacterSet characterSetWithCharactersInString:[textField text]];
-    
-    valid = [okchars isSupersetOfSet:stringsFromField];
-    
-    return valid;
-    
-}
 
 
 

@@ -11,7 +11,7 @@
 @interface Disco : NSObject
 
 @property NSString* nombre;
-@property NSNumber* precio;
-@property NSNumber* vendidos;
+@property NSInteger* precio;
+@property NSInteger* vendidos;
 
 @end

@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Disco.h";
+#import "Disco.h"
+#import "Concierto.h"
+#import "ConciertoViewController.h"
 
 @interface NuevoConciertoViewController : UIViewController
 @property NSInteger posicion;
 @property NSMutableArray *nombreDisco;
 @property NSMutableArray *precioDisco;
 @property NSMutableArray *discos;
+@property (strong, nonatomic) IBOutlet UITextField *nombreConcierto;
+@property Concierto* concierto;
 @end

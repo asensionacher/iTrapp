@@ -27,8 +27,8 @@
     concierto.discos = [[NSMutableArray alloc] init];
     Disco *disco = [[Disco alloc] init];
     disco.nombre = @"ADROMICFMS";
-    disco.precio = @10;
-    disco.vendidos= @0;
+    disco.precio = 10;
+    disco.vendidos= 0;
     [concierto.discos addObject:disco];
     [_conciertos addObject:concierto];
     
@@ -37,14 +37,14 @@
     concierto1.nombre = @"LA MERCE";
     concierto1.discos = [[NSMutableArray alloc] init];
     d.nombre = @"RU";
-    d.precio = @8;
-    d.vendidos= @1;
+    d.precio = 8;
+    d.vendidos= 1;
     [concierto1.discos addObject:d];
 
     Disco *dd = [[Disco alloc] init];
     dd.nombre = @"ADROMICFMS";
-    dd.precio = @8;
-    dd.vendidos= @2;
+    dd.precio = 8;
+    dd.vendidos= 2;
     [concierto1.discos addObject:dd];
     [_conciertos addObject:concierto1];
     

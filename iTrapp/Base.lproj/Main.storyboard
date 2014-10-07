@@ -102,6 +102,51 @@
             </objects>
             <point key="canvasLocation" x="2808" y="-315"/>
         </scene>
+        <!--ConciertoViewController-->
+        <scene sceneID="tQz-Fj-V3Y">
+            <objects>
+                <viewController restorationIdentifier="conciertoViewController" storyboardIdentifier="ConciertoViewController" title="ConciertoViewController" id="3aX-ud-ztW" customClass="ConciertoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bmz-Dw-chu"/>
+                        <viewControllerLayoutGuide type="bottom" id="cqn-rO-XXr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hlh-85-YzV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CASH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnT-Ec-VPU">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="497" width="400" height="95"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qnT-Ec-VPU"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qnT-Ec-VPU"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Concierto" id="Vkf-OQ-cZM">
+                        <barButtonItem key="rightBarButtonItem" title="Fin" id="3fL-kG-KHa"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dineroLabel" destination="qnT-Ec-VPU" id="Vx1-SQ-7S8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7T5-At-Rzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2808" y="348"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ylt-AV-kSi">
             <objects>
@@ -169,12 +214,15 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Nuevo concierto" id="wme-7C-As5">
-                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="5Il-y0-x5g">
+                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="92R-9o-ywf">
                             <connections>
-                                <action selector="siguienteButton:" destination="oFF-de-qgk" id="K45-0R-5hP"/>
+                                <action selector="siguienteButton:" destination="oFF-de-qgk" id="mCN-2g-nD8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nombreConcierto" destination="K71-5d-CzI" id="vS0-XY-Nxf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OBg-mA-39p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -215,6 +263,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aL1-mj-znT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="483" y="351"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gN0-nS-XNr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Ep-Tu-BgN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W4z-eL-E3q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3aX-ud-ztW" kind="relationship" relationship="rootViewController" id="VUj-Id-uFK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jcN-Ef-Iy3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2061" y="351"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
