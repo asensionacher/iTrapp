@@ -63,11 +63,14 @@
     Disco *d =[[Disco alloc] init];
     d = [_concierto.discos objectAtIndex:sender.tag];
     [_concierto.discos removeObjectAtIndex:sender.tag];
-    d.vendidos = d.vendidos + 1;
+
+    //incrementem en 1
+    NSNumber *number = d.vendidos;
+    int value = [number intValue];
+    number = [NSNumber numberWithInt:value + 1];
     
-    
-    
-    
+    d.vendidos = number;
+    [_concierto.discos insertObject:d atIndex:sender.tag];
     
 }
 

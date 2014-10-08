@@ -21,14 +21,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _conciertos = [[NSMutableArray alloc] init];
+    /*_conciertos = [[NSMutableArray alloc] init];
     Concierto *concierto = [[Concierto alloc] init];
     concierto.nombre = @"PXXR PVRTY";
     concierto.discos = [[NSMutableArray alloc] init];
     Disco *disco = [[Disco alloc] init];
+    NSNumber *myNumber = @10;
+    NSInteger myInteger = [myNumber integerValue];
     disco.nombre = @"ADROMICFMS";
-    disco.precio = 10;
-    disco.vendidos= 0;
+    disco.precio = myInteger;
+    
+    myNumber = @0;
+    myInteger = [myNumber integerValue];
+    
+    disco.vendidos=myInteger ;
     [concierto.discos addObject:disco];
     [_conciertos addObject:concierto];
     
@@ -37,17 +43,29 @@
     concierto1.nombre = @"LA MERCE";
     concierto1.discos = [[NSMutableArray alloc] init];
     d.nombre = @"RU";
-    d.precio = 8;
-    d.vendidos= 1;
+    
+    myNumber = @8;
+    myInteger = [myNumber integerValue];
+    d.precio = myInteger;
+    
+    myNumber = @1;
+    myInteger = [myNumber integerValue];
+    d.vendidos= myInteger;
     [concierto1.discos addObject:d];
 
     Disco *dd = [[Disco alloc] init];
     dd.nombre = @"ADROMICFMS";
-    dd.precio = 8;
-    dd.vendidos= 2;
+    
+    myNumber = @8;
+    myInteger = [myNumber integerValue];
+    dd.precio = myInteger;
+    
+    myNumber = @2;
+    myInteger = [myNumber integerValue];
+    dd.vendidos= myInteger;
     [concierto1.discos addObject:dd];
     [_conciertos addObject:concierto1];
-    
+    */
 }
 
 - (void)didReceiveMemoryWarning {

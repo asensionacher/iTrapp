@@ -102,12 +102,11 @@ void *anadirLabelNombreDisco();
             NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
             [f setNumberStyle:NSNumberFormatterDecimalStyle];
             NSNumber * myN = [f numberFromString:precioDisco.text];
-            NSInteger *myNumber = [myN integerValue];
             
             Disco *disco = [Disco alloc];
-            disco.precio = myNumber;
+            disco.precio = myN;
             disco.nombre = nombreDisco.text;
-            disco.vendidos = 0;
+            disco.vendidos = @0;
             [_discos addObject:disco];
         }
     }

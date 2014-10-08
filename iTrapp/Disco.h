@@ -10,8 +10,8 @@
 
 @interface Disco : NSObject
 
-@property NSString* nombre;
-@property NSInteger* precio;
-@property NSInteger* vendidos;
+@property (assign, nonatomic) NSString* nombre;
+@property (assign, readwrite) NSNumber* precio;
+@property (assign, readwrite) NSNumber* vendidos;
 
 @end
