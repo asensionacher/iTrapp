@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "Concierto.h"
+#import <sqlite3.h>
 
 @interface ConciertoViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UILabel *dineroLabel;
 @property(nonatomic) Concierto *concierto;
 @property(nonatomic) double *posicion;
 @property NSMutableArray *labelArray;
+@property sqlite3 *bd;
 
 
 @end

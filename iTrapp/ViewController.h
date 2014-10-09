@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <sqlite3.h>
 
-@interface ViewController : UITableViewController
+@interface ViewController : UITableViewController {
+    sqlite3 *bd;
+}
 
 
 @end

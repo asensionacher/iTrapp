@@ -55,6 +55,7 @@
     UILabel *textField = [[UILabel alloc] init];
     textField = [_labelArray objectAtIndex:sender.tag];
     [_labelArray removeObjectAtIndex:sender.tag];
+    
     NSNumber *myDoubleNumber = [NSNumber numberWithDouble:sender.value];
     textField.text = [myDoubleNumber stringValue];
     [_labelArray insertObject:textField atIndex:sender.tag];
@@ -72,12 +73,23 @@
     d.vendidos = number;
     [_concierto.discos insertObject:d atIndex:sender.tag];
     
+    int a = [_dineroLabel.text intValue];
+    value = [d.precio intValue];
+    value +=a;
+    _dineroLabel.text = [@(value) stringValue];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)finButton:(id)sender {
+    //GUARDAR TOT A DB
+}
+
+
+
 
 
 @end

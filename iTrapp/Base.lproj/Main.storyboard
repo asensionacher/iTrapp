@@ -137,7 +137,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Concierto" id="Vkf-OQ-cZM">
-                        <barButtonItem key="rightBarButtonItem" title="Fin" id="3fL-kG-KHa"/>
+                        <barButtonItem key="rightBarButtonItem" title="Fin" id="3fL-kG-KHa">
+                            <connections>
+                                <action selector="finButton:" destination="3aX-ud-ztW" id="7KV-3Y-psd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dineroLabel" destination="qnT-Ec-VPU" id="Vx1-SQ-7S8"/>

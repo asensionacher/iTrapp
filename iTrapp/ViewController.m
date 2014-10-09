@@ -20,6 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self createEditableCopyOfDatabaseIfNeeded];
+    
     // Do any additional setup after loading the view, typically from a nib.
     /*_conciertos = [[NSMutableArray alloc] init];
     Concierto *concierto = [[Concierto alloc] init];
@@ -92,5 +95,37 @@
     informacionConciertoViewController.conciertoSeleccionado = [_conciertos objectAtIndex:indexPath.row];
     [self presentViewController:navigationController animated:YES completion:nil];
 }
+
+- (NSString *) obtenerRutaBD{
+    NSString *dirDocs;
+    NSArray *rutas;
+    NSString *rutaBD;
+    rutas = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    dirDocs = [rutas objectAtIndex:0];
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    rutaBD = [[NSString alloc] initWithString:[dirDocs stringByAppendingPathComponent:@"mydatabase.sqlite"]];
+    if([fileMgr fileExistsAtPath:rutaBD] == NO){
+        [fileMgr copyItemAtPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"mydatabase.sqlite"] toPath:rutaBD error:NULL];
+    }
+    return rutaBD;
+}
+
+- (void) createEditableCopyOfDatabaseIfNeeded
+{
+    BOOL success;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"mydatabase.sqlite"];
+    success = [fileManager fileExistsAtPath:writableDBPath];
+    if (success) return;
+    NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"MyDB.sqlite"];
+    success = [fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
+    if (!success) {
+        NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
+    }
+}
+
 
 @end
