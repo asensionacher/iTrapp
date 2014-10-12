@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "FMDatabase.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

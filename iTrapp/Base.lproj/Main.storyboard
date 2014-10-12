@@ -40,8 +40,7 @@
                     <navigationItem key="navigationItem" title="iTrapp" id="ou9-z2-ACX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="l5o-NQ-Nij">
                             <connections>
-                                <action selector="nuevoButton:" destination="8Gq-Fb-Ixh" id="n5f-MY-Bad"/>
-                                <segue destination="oFF-de-qgk" kind="show" id="F0K-34-H1o"/>
+                                <action selector="masButton:" destination="8Gq-Fb-Ixh" id="b7j-cz-Go2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -287,7 +286,4 @@
             <point key="canvasLocation" x="2061" y="351"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="F0K-34-H1o"/>
-    </inferredMetricsTieBreakers>
 </document>

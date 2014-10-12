@@ -13,9 +13,11 @@
 
 @interface NuevoConciertoViewController : UIViewController
 @property NSInteger posicion;
-@property NSMutableArray *nombreDisco;
-@property NSMutableArray *precioDisco;
+@property NSInteger indice;
+@property NSArray *subViews;
+@property NSMutableArray *stringArray;
 @property NSMutableArray *discos;
+@property NSMutableArray *arrayStrings;
 @property (strong, nonatomic) IBOutlet UITextField *nombreConcierto;
 @property Concierto* concierto;
 @end

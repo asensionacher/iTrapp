@@ -20,14 +20,14 @@
     
     _dineroLabel.text = @"0€";
     _labelArray = [[NSMutableArray alloc] init];
+    Concierto *c = [[Concierto alloc] init];
+    c.discos = [[NSMutableArray alloc]init];
+    c = [self concierto];
+    
+    UILabel *textField;
+    UILabel *textField1;
     
     for (int i = 0; i < _concierto.discos.count; i++) {
-        
-        UILabel *textField = [[UILabel alloc] initWithFrame:CGRectMake(10, (i*30)+120, 300, 20)];
-        textField.font = [UIFont systemFontOfSize:15];
-        Disco *d = [ _concierto.discos objectAtIndex: (i)];
-        textField.text = d.nombre;
-        [self.view addSubview:textField];
         
         UIStepper *steperCode = [[UIStepper alloc] initWithFrame:CGRectMake(100, (i*30)+120, 300, 200)];
         [steperCode addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
@@ -39,12 +39,19 @@
         
         [self.view addSubview:steperCode];
         
-        
-        UILabel *textField1 = [[UILabel alloc] initWithFrame:CGRectMake(250, (i*30)+120, 300, 20)];
+        textField1 = [[UILabel alloc] initWithFrame:CGRectMake(250, (i*30)+120, 300, 20)];
         textField1.font = [UIFont systemFontOfSize:15];
         textField1.text = @"0";
         [_labelArray addObject:textField1];
         [self.view addSubview:textField1];
+        
+        Disco *d =[[Disco alloc] init];
+        
+        textField = [[UILabel alloc] initWithFrame:CGRectMake(10, (i*30)+120, 300, 20)];
+        textField.font = [UIFont systemFontOfSize:15];
+        d = [c.discos objectAtIndex:i];
+        textField.text = d.nombre;
+        [self.view addSubview:textField];
         
     }
     
@@ -86,10 +93,32 @@
 
 - (IBAction)finButton:(id)sender {
     //GUARDAR TOT A DB
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsPath = [paths objectAtIndex:0];
+    NSString *path = [docsPath stringByAppendingPathComponent:@"mydatabase.sqlite"];
+    
+    FMDatabase *database = [FMDatabase databaseWithPath:path];
+    [database open];
+    
+    [database executeUpdate:@"insert into concierto(nombreConcierto, recaudado) values(?,?)",
+     _concierto.nombre, _dineroLabel.text,nil];
+    FMResultSet *results = [database executeQuery:@"select * from concierto"];
+    NSLog(@"HOLA");
+    while([results next]) {
+        NSLog(@"HOLA");
+        NSLog(@"%@",[results stringForColumn:@"nombreConcierto"]);
+        NSLog(@"%@",[results stringForColumn:@"recaudado"]);
+    }
+    for (int i = 0; i < _concierto.discos.count; i++) {
+        Disco *d =[[Disco alloc] init];
+        d = [_concierto.discos objectAtIndex:i];
+        [database executeUpdate:@"insert into disco(nombre, precio, vendidos, concierto) values(?,?,?,?)",
+         d.nombre, d.precio, d.vendidos,_concierto.nombre,nil];
+        
+    }
+    
+    [database close];
 }
-
-
-
 
 
 @end

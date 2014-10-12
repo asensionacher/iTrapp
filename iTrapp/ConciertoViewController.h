@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Concierto.h"
-#import <sqlite3.h>
+#import "FMDatabase.h"
+#import "ViewController.h"
 
 @interface ConciertoViewController : UIViewController
 
@@ -16,7 +17,6 @@
 @property(nonatomic) Concierto *concierto;
 @property(nonatomic) double *posicion;
 @property NSMutableArray *labelArray;
-@property sqlite3 *bd;
 
 
 @end

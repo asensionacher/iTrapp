@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <sqlite3.h>
+#import "Concierto.h"
+#import "InformacionConciertoViewController.h"
+#import "FMDatabase.h"
+#import "NuevoConciertoViewController.h"
 
-@interface ViewController : UITableViewController {
-    sqlite3 *bd;
-}
 
+@interface ViewController : UITableViewController
+
+@property NSMutableArray *conciertos;
 
 @end
 

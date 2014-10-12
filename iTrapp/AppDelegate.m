@@ -17,6 +17,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsPath = [paths objectAtIndex:0];
+    NSString *path = [docsPath stringByAppendingPathComponent:@"mydatabase.sqlite"];
+    
+    FMDatabase *database = [FMDatabase databaseWithPath:path];
+    [database open];
+    [database executeUpdate:@"CREATE TABLE concierto (id INTEGER PRIMARY KEY AUTOINCREMENT, nombreConcierto TEXT, recaudado TEXT)"];
+    [database executeUpdate:@"CREATE TABLE disco (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, precio TEXT, vendidos TEXT, concierto TEXT)"];
+    [database close];
+    
     return YES;
 }
 

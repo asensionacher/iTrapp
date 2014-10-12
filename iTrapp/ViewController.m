@@ -7,11 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "Concierto.h"
-#import "InformacionConciertoViewController.h"
 
 @interface ViewController ()
-@property NSMutableArray *conciertos;
 
 @end
 
@@ -21,8 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self createEditableCopyOfDatabaseIfNeeded];
-    
+        
     // Do any additional setup after loading the view, typically from a nib.
     /*_conciertos = [[NSMutableArray alloc] init];
     Concierto *concierto = [[Concierto alloc] init];
@@ -39,7 +35,7 @@
     
     disco.vendidos=myInteger ;
     [concierto.discos addObject:disco];
-    [_conciertos addObject:concierto];
+    [_conciertoss addObject:concierto];
     
     Disco *d = [[Disco alloc] init];
     Concierto *concierto1 = [[Concierto alloc] init];
@@ -67,13 +63,42 @@
     myInteger = [myNumber integerValue];
     dd.vendidos= myInteger;
     [concierto1.discos addObject:dd];
-    [_conciertos addObject:concierto1];
+    [_conciertoss addObject:concierto1];
     */
+    NSLog(@"HOLA0");
+
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsPath = [paths objectAtIndex:0];
+    NSString *path = [docsPath stringByAppendingPathComponent:@"mydatabase.sqlite"];
+    
+    FMDatabase *database = [FMDatabase databaseWithPath:path];
+    [database open];
+    
+    FMResultSet *results = [database executeQuery:@"select * from concierto"];
+    while([results next]) {
+        
+        Concierto *concierto = [[Concierto alloc] init];
+        concierto.nombre = [results stringForColumn:@"nombreConcierto"];
+        NSLog(@"HOLA");
+        NSLog(@"%@",[results stringForColumn:@"nombreConcierto"]);
+        NSLog(@"%@",[results stringForColumn:@"recaudado"]);
+    }
+    
+    [database close];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)masButton:(id)sender {
+    NuevoConciertoViewController *nuevoConciertoViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"NuevoConciertoViewController"];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:nuevoConciertoViewController];
+    [self presentViewController:navigationController animated:YES completion:nil];
+    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -94,20 +119,6 @@
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:informacionConciertoViewController];
     informacionConciertoViewController.conciertoSeleccionado = [_conciertos objectAtIndex:indexPath.row];
     [self presentViewController:navigationController animated:YES completion:nil];
-}
-
-- (NSString *) obtenerRutaBD{
-    NSString *dirDocs;
-    NSArray *rutas;
-    NSString *rutaBD;
-    rutas = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    dirDocs = [rutas objectAtIndex:0];
-    NSFileManager *fileMgr = [NSFileManager defaultManager];
-    rutaBD = [[NSString alloc] initWithString:[dirDocs stringByAppendingPathComponent:@"mydatabase.sqlite"]];
-    if([fileMgr fileExistsAtPath:rutaBD] == NO){
-        [fileMgr copyItemAtPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"mydatabase.sqlite"] toPath:rutaBD error:NULL];
-    }
-    return rutaBD;
 }
 
 - (void) createEditableCopyOfDatabaseIfNeeded
